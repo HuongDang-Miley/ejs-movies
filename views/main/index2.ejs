@@ -9,13 +9,15 @@
 </head>
 
 <body>
-    <h1>Movie Now Playing</h1>
+    <h1 style ="text-align: center;">Movie Now Playing</h1>
     <% data.forEach(element => { %>
-        <div style = "background-color: whitesmoke; margin-top: 10px;">
-            <h3><%= element.original_title %> </h3>
-            <% let backdrop = `http://image.tmdb.org/t/p/w500${element.backdrop_path}` %> 
-            <img src="<%= backdrop %> " alt="">
-            <p><%= element.overview %> </p>
+        <div style = "background-color: black; color: whitesmoke; margin: 10px auto; display: flex; width: 1000px">
+            <% let backdrop = `http://image.tmdb.org/t/p/w500${element.poster_path}` %> 
+            <img src="<%= backdrop %> " alt="" style="display: inline-block;">
+            <div style="display: inline-block; padding-top: 20px; padding-left: 20px; width: 400px">
+                <h3><%= element.original_title %> </h3>
+                <p><%= element.overview %> </p>
+            </div>
         </div>
     <% }) %>
    
