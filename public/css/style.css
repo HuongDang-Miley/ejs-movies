@@ -1,9 +1,31 @@
-
 header {
     height: 64px;
     width: 100%;
     text-align: center;
     background-color: black;
-    color: white;
+    color: whitesmoke;
     font-size: 36px;
+    font-family:'Arial Narrow Bold';
+}
+
+body {
+    background: black;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.movie-section {
+    color: whitesmoke;
+    margin: 10px auto;
+    display: flex;
+    width: 800px;
+    border: 1px solid darkgrey;
+}
+
+.movie-overview {
+    display: inline-block;
+    padding: 20px;
 }

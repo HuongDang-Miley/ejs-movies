@@ -9,12 +9,19 @@
 </head>
 
 <body>
-    <header>Movies Now Playing</header>
-    <h2> <%= myData.original_title %> </h2>
-    <p> <%= myData.overview %> </p>
-    <img src="<%=backdrop%>" alt="this is an image">
+    <h1>Movie Now Playing</h1>
 
-    <script src="./main.js"></script>
+    <% data.forEach(element => { %>
+    <div class="movie-section">
+        <% let backdrop = `http://image.tmdb.org/t/p/w400${element.poster_path}` %>
+        <img src="<%= backdrop %> " alt="">
+        <div class="movie-overview">
+            <h2><%= element.original_title %> </h2>
+            <p><%= element.overview %> </p>
+        </div>
+    </div>
+    <% }) %>
+
 </body>
 
 </html>
